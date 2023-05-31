@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Memoria</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="usuariosTest.js"></script>
+</head>
+
+
+<body>
+
+
+  <main>
+
+    <div class="menu">
+      <div class="contenedor-basico">
+
+        <h1 class="titulo">El juego de la memoria</h1>
+
+        <button class="botonIniciar boton">Jugar</button>
+      </div>
+      <div class="rankingLista">
+        <h3 class="titulo-secundario">TOP 3 MEJORES TIEMPOS</h3>
+        <div class="rankingNiveles">
+
+          <div>
+            <ol class="rankingFACIL ranking">
+              <p>Facil</p>
+
+            </ol>
+          </div>
+          <div>
+            <ol class="rankingNORMAL ranking">
+              <p>Normal</p>
+            </ol>
+          </div>
+          <div>
+            <ol class="rankingDIFICIL ranking">
+              <p>Dificil</p>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="usuariosTotales">
+      <h3 class="titulo">Filtrar usuarios por nivel</h3>
+      <div class="filtrado">
+        <button class="filtroTodos">TODO</button>
+        <button class="filtroFacil">FACIL</button>
+        <button class="filtroNormal">NORMAL</button>
+        <button class="filtroDificil">DIFICIL</button>
+      </div>
+
+      <div class="contenedorTotales">
+      </div>
+
+      <div class="botones">
+        <div class="boton" id="volverInicio">Volver al inicio</div>
+        <div class="paginacionControles">
+          <button class="retroceder boton">Retroceder</button>
+          <button class="avanzar boton">Avanzar</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="niveles">
+      <h1 class="tituloNivel">Selecciona un nivel</h1>
+      <button class="nivel boton">Facil</button>
+      <button class="nivel boton">Normal</button>
+      <button class="nivel boton">Dificil</button>
+
+
+
+    </div>
+
+
+    <div class="hidden perder">SE ACABO EL TIEMPO..</div>
+    <div class="juego">
+
+      <div class="container-contador">
+        <div>Tiempo: <span class="contador">0</span></div>
+        <div>Aciertos: <span class="aciertos">0</span></div>
+      </div>
+      <div id="board"></div>
+
+
+
+      <div class="contenedorBotonesJuego">
+
+        <button class="new-game boton">Nueva Partida</button>
+
+        <button class="volver boton">Volver al inicio</button>
+      </div>
+    </div>
+
+    <div class="ganador">
+      <div class="mensaje">
+        <h1 class="titulo titulo-secundario">Felicidades ¡Ganaste!</h1>
+        <div class="puntajeFinal" style="font-weight: bold;">¡Registra tu record!</div>
+      </div>
+      <form>
+        <div>Su tiempo fue de <span class="tiempo"></span> segundos</div>
+        <label>Ingrese su nombre:<input type="text" id="nombre" maxlength=4 placeholder="Nombre" /></label>
+
+        <button type="submit" class="registrar boton">Registrar</button>
+      </form>
+    </div>
+  </main>
+
+
+  <script src="dom.js" defer></script>
+  <script src="scriptFiltrar.js" defer></script>
+  <script src="scriptMenu.js" defer></script>
+  <script src="scriptJuego.js" defer></script>
+  <script src="funcionesBasicas.js" defer></script>
+
+
+
+
+</body>
+
+</html>
