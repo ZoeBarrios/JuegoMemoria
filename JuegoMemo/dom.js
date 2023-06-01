@@ -1,5 +1,5 @@
 //VARIABLES GLOBALES
-var nivelActual = "";
+var nivelActual = "Facil";
 let contador = 0;
 let intervaloContador;
 let intervaloTiempo;
