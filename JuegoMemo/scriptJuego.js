@@ -99,13 +99,20 @@ function deselect(selects) {
       back1.style.background = "var(--card-correct-color)";
       back2.style.background = "var(--card-correct-color)";
 
-      if (contadorSeleccionadasTotales == NIVELES[nivelActual].cartas / 2 - 1) {
+      if (
+        contadorSeleccionadasTotales == NIVELES[nivelActual].cartas / 2 - 1 &&
+        contadorEl.innerText > 0
+      ) {
+        clearInterval(intervaloContador);
+        clearInterval(intervaloTiempo);
         setTimeout(() => {
           juegoEl.style.display = "none";
           ganadorEl.style.display = "flex";
-          puntajeFinalEl.innerText = contador;
-          clearInterval(intervaloContador);
-          clearInterval(intervaloTiempo);
+          if (esReto) {
+            puntajeFinalEl.innerText = esReto - contador;
+          } else {
+            puntajeFinalEl.innerText = contador;
+          }
         }, 1000);
       } else {
         contadorSeleccionadasTotales++;

@@ -3,6 +3,7 @@ var nivelActual = "";
 let contador = 0;
 let intervaloContador;
 let intervaloTiempo;
+let esReto = false;
 const NIVELES = {
   FACIL: {
     cartas: 6,
@@ -59,6 +60,7 @@ const botonRegistrar = document.querySelector(".registrar");
 const puntajeFinalEl = document.querySelector(".tiempo");
 const ganadorEl = document.querySelector(".ganador");
 const nombreEl = document.querySelector("#nombre");
+const mensajeGanarEl = document.querySelector(".mensajeGanar");
 
 //FUNCIONES ELEMENTOS DEL DOM
 

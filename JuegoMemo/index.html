@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <title>Memoria</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/jpg" href="/favicon.ico"/>
   <link rel="stylesheet"
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
@@ -105,14 +104,16 @@
 
     <div class="ganador">
       <div class="mensaje">
-        <h1 class="titulo titulo-secundario">Felicidades ¡Ganaste!</h1>
+        <h1 class="titulo titulo-secundario" id="mensajeGanar">Felicidades ¡Ganaste!</h1>
         <div class="puntajeFinal" style="font-weight: bold;">¡Registra tu record!</div>
       </div>
       <form>
         <div>Su tiempo fue de <span class="tiempo"></span> segundos</div>
         <label>Ingrese su nombre:<input type="text" id="nombre" maxlength=4 placeholder="Nombre" /></label>
-
-        <button type="submit" class="registrar boton">Registrar</button>
+        <div class="botonesForm">
+          <button type="submit" class="registrar boton">Registrar</button>
+          <button class="volver boton omitir">Omitir</button>
+        </div>
       </form>
     </div>
   </main>

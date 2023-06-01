@@ -21,6 +21,7 @@ function inicializarJuego() {
   clearInterval(intervaloContador);
   clearInterval(intervaloTiempo);
   setTimeout(habilitarBotones, NIVELES[nivelActual].tiempo * 15);
+  esReto = false;
   contadorSeleccionadasTotales = 0;
   aciertosEl.innerText = 0;
   contadorSeleccionadas = 0;
@@ -37,6 +38,7 @@ function iniciarContador(reto = false) {
 }
 
 function inicializarReto(tiempo) {
+  esReto = tiempo;
   clearInterval(intervaloContador);
   clearInterval(intervaloTiempo);
   contadorSeleccionadasTotales = 0;
@@ -46,7 +48,7 @@ function inicializarReto(tiempo) {
   contadorEl.innerText = contador;
 }
 
-function controlarTiempo(tiempo) {
+function controlarTiempo() {
   intervaloTiempo = setInterval(() => {
     if (contadorEl.innerText == 0) {
       juegoEl.style.display = "none";

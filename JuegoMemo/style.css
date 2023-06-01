@@ -541,6 +541,24 @@ form input:focus {
   color: white;
 }
 
+.botonesForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  flex: 1;
+  text-align: center;
+}
+
+.omitir {
+  width: auto;
+}
+
+.registrar,
+.omitir {
+  font-size: 0.8em;
+}
+
 .error {
   border-bottom: 3px solid red;
 }
@@ -601,7 +619,7 @@ form input:focus {
 
   .contenedorBotonesJuego {
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
   }
 
   .new-game,
@@ -609,7 +627,7 @@ form input:focus {
     text-align: center;
     margin: 0;
     width: 80%;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .boardNORMAL {
