@@ -6,10 +6,10 @@ let enComparacion = false;
 
 //EVENTOS DE ELEMENTOS DEL DOM
 botonNuevaPartidaEl.addEventListener("click", (ev) => {
+  deshabilitarBotones();
   ev.preventDefault();
   contadorEl.innerText = 0;
   inicializarJuego();
-  deshabilitarBotones();
 
   genBoard();
 });
@@ -106,6 +106,7 @@ function deselect(selects) {
         clearInterval(intervaloContador);
         clearInterval(intervaloTiempo);
         setTimeout(() => {
+          if (juegoEl.style.display == "none") return;
           juegoEl.style.display = "none";
           ganadorEl.style.display = "flex";
           if (esReto) {
